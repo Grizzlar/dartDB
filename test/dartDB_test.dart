@@ -1,16 +1,6 @@
 import 'package:dartDB/dartDB.dart';
-import 'package:test/test.dart';
 
-void main() {
-  group('A group of tests', () {
-    Awesome awesome;
-
-    setUp(() {
-      awesome = Awesome();
-    });
-
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
-    });
-  });
+void main() async {
+  var d = DBServerDaemon('127.0.0.1', 2929);
+  d.initServers(5);
 }
