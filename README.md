@@ -11,7 +11,8 @@ A simple usage example:
 import 'package:dartDB/dartDB.dart';
 
 main() {
-  var awesome = new Awesome();
+  var d = DBServerDaemon('127.0.0.1', 2929);
+  d.initServers(5);
 }
 ```
 
